@@ -24,9 +24,9 @@ public {
   import apps.contacts.views;
 }
 
-DApplication contactsApp;
+DApp contactsApp;
 static this() {
-  contactsApp = Application
+  contactsApp = App
     .name("contactsApp")
     .rootPath("/apps/contacts")
     .addRoute(Route("/", HTTPMethod.GET, contactsIndexPageController));
