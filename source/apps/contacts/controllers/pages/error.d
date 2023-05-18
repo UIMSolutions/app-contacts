@@ -3,25 +3,19 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module apps.contacts.views.error;
+module apps.contacts.controllers.pages.error;
 
 import apps.contacts;
 @safe:
 
-class DCTTErrorView : DView {
-  mixin(ViewThis!("CTTErrorView"));
+class DCTTErrorPageController : DAPPPageController {
+  mixin(ControllerThis!("CTTErrorPageController"));
 
-  override void beforeH5(STRINGAA options = null) {
-    super.beforeH5(options);
-  }
+  override void initialize(Json configSettings = Json(null)) {
+    super.initialize(configSettings);
 
-  override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DCTTErrorView~":DCTTErrorView("~this.name~")::toH5");
-    super.toH5(options);
-
-    return [
-      H5Div("APP Contacts -> Error")
-    ].toH5;
+    this
+      .view(CTTErrorView(this));
   }
 }
-mixin(ViewCalls!("CTTErrorView", "DCTTErrorView"));
+mixin(ControllerCalls!("CTTErrorPageController"));

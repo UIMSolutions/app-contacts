@@ -10,7 +10,7 @@
 	"targetType": "dynamicLibrary",
 	"configurations": [
 		{
-			"name": "offline",
+			"name": "offline"
 		},
 		{
 			"name": "test",

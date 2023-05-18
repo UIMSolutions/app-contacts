@@ -1,7 +1,6 @@
+/*********************************************************************************************************
+  Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+  License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+  Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
 module apps.contacts.views.components;
-
-@safe:
-import apps.contacts;
-
-public import apps.contacts.views.components.forms;
-public import apps.contacts.views.components.pages;
