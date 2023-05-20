@@ -30,11 +30,12 @@ public {
   import apps.contacts.views;
 }
 
-DApp contactsApp;
+@safe:
 static this() {
-  contactsApp = App
+  AppRegistry.register("apps.contacts",   
+    App
     .name("contactsApp")
     .rootPath("/apps/contacts")
     .addRoute(Route("", HTTPMethod.GET, CTTIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, CTTIndexPageController));
+    .addRoute(Route("/", HTTPMethod.GET, CTTIndexPageController)));
 }

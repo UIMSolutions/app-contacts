@@ -1,1 +1,1 @@
-# App 🎁 app-myname
+# Package 📦 apps.contacts
