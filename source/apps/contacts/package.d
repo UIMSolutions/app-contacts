@@ -36,6 +36,6 @@ static this() {
     App
     .name("contactsApp")
     .rootPath("/apps/contacts")
-    .addRoute(Route("", HTTPMethod.GET, CTTIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, CTTIndexPageController)));
+    .addRoute(Route("", HTTPMethod.GET, IndexPageController))
+    .addRoute(Route("/", HTTPMethod.GET, IndexPageController)));
 }

@@ -8,14 +8,14 @@ module apps.contacts.controllers.pages.index;
 import apps.contacts;
 @safe:
 
-class DCTTIndexPageController : DAPPPageController {
-  mixin(ControllerThis!("CTTIndexPageController"));
+class DIndexPageController : DAPPPageController {
+  mixin(ControllerThis!("IndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(CTTIndexView(this));
+      .view(IndexView(this));
   }
 }
-mixin(ControllerCalls!("CTTIndexPageController"));
+mixin(ControllerCalls!("IndexPageController"));
