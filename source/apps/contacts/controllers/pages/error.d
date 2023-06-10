@@ -8,7 +8,7 @@ module apps.contacts.controllers.pages.error;
 import apps.contacts;
 @safe:
 
-class DCTTErrorPageController : DAPPPageController {
+class DCTTErrorPageController : DPageController {
   mixin(ControllerThis!("CTTErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {

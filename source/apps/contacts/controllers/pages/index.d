@@ -8,7 +8,7 @@ module apps.contacts.controllers.pages.index;
 import apps.contacts;
 @safe:
 
-class DIndexPageController : DAPPPageController {
+class DIndexPageController : DPageController {
   mixin(ControllerThis!("IndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
