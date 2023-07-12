@@ -33,9 +33,10 @@ public {
 @safe:
 static this() {
   AppRegistry.register("apps.contacts",   
-    App
-    .name("contactsApp")
-    .rootPath("/apps/contacts")
-    .addRoute(Route("", HTTPMethod.GET, IndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, IndexPageController)));
+    App("contactsApp", "/apps/contacts")
+      .addRoutes(
+        Route("", HTTPMethod.GET, IndexPageController),
+        Route("/", HTTPMethod.GET, IndexPageController)
+      )
+    );
 }
