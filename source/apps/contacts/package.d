@@ -34,6 +34,7 @@ public {
 static this() {
   AppRegistry.register("apps.contacts",   
     App("contactsApp", "/apps/contacts")
+      .importTranslations()
       .addRoutes(
         Route("", HTTPMethod.GET, IndexPageController),
         Route("/", HTTPMethod.GET, IndexPageController)
