@@ -33,7 +33,7 @@ public {
 @safe:
 static this() {
   AppRegistry.register("apps.contacts",   
-    App("contactsApp", "/apps/contacts")
+    App("contactsApp", "apps/contacts")
       .importTranslations()
       .addRoutes(
         Route("", HTTPMethod.GET, IndexPageController),
