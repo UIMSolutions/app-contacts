@@ -7,8 +7,10 @@ module apps.contacts;
 
 mixin(ImportPhobos!());
 
-// Dub
-public import vibe.d;
+// External
+public {
+  import vibe.d;
+}
 
 // UIM
 public import uim.core;
@@ -32,12 +34,18 @@ public {
 
 @safe:
 static this() {
-  AppRegistry.register("apps.contacts",   
-    App("contactsApp", "apps/contacts")
-      .importTranslations()
-      .addRoutes(
-        Route("", HTTPMethod.GET, IndexPageController),
-        Route("/", HTTPMethod.GET, IndexPageController)
-      )
+  auto myApp = App("contactsApp", "apps/contacts");
+  
+  with(myApp) {
+    importTranslations;
+    addControllers([
+      "contact.index": IndexPageController
+    ]);
+    addRoutes(
+      Route("", HTTPMethod.GET, controller("contact.index")),
+      Route("/", HTTPMethod.GET, controller("contact.index"))
     );
+  }
+
+  AppRegistry.register("apps.contacts", myApp);
 }
